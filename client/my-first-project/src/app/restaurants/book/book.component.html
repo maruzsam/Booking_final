@@ -1,0 +1,76 @@
+<div class="table-container" *ngIf="restaurants && restaurants.length; else noRestaurantsTemplate">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Menu</th>
+                <th>Table</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let restaurant of restaurants">
+                <td>{{restaurant.name}}</td>
+                <td>{{restaurant.menu}}</td>
+                <td>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Table Number</th>
+                                <th>Type</th>
+                                <th>Seats Number</th>
+                                <th>Date</th>
+                                <th>Book</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let table of restaurant.tables;  let i = index" >
+                                <td>{{table.number}}</td>
+                                <td>{{table.type}}</td>
+                                <td>{{table.seatsNumber}}</td>
+                                <td><input [(ngModel)]="dates[i]" name="Date" type="date" (change)="change(restaurant, table, dates[i])"></td>
+                                <td>
+                                    <button *ngIf="!isBooked(restaurant, table)" type="button" (click)="book(restaurant, table, dates[i])">Book table</button>
+                                    <p *ngIf="isBooked(restaurant, table)">This table is already booked on the selected date.</p>
+                                </td>
+                            </tr>
+                        </tbody>                        
+                    </table>          
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-container" *ngIf="booked && booked.length ; else noBooksTemplate">
+    <table>
+        <thead>
+            <tr>
+                <th>Booked Restaurant Name</th>
+                <th>Booked Table Number</th>
+                <th>Booked Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let booked of booked">
+                <td>{{booked.restaurantId}}</td>
+                <td>{{booked.tableNumber}}</td>
+                <td>{{booked.day | date:'yyyy-MM-dd'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="new-restaurant-button">
+    <button type="reset" (click)="logout()">Logout</button>
+</div>
+
+
+
+<ng-template #noRestaurantsTemplate>
+    <p>No restaurants available.</p>
+</ng-template>
+
+<ng-template #noBooksTemplate>
+    <p>No older books available for this user.</p>
+    <p>Login with a user who booked a table before if you want to see the older books.</p>
+</ng-template>

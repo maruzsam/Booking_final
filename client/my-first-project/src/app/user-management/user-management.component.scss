@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .table-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  th {
+    background-color: #6495ED;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;   
+  }
+  
+  .delete-button {
+    background-color: red;
+  }
+  
+  .new-restaurant-button {    
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;  
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #6495ED;
+  }
+  

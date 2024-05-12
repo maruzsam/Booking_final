@@ -1,0 +1,4 @@
+_id,email,name,address,nickname,password,__v,role
+663f70acaf60e6101d8df2a8,test@test.com,test,test,test,$2b$10$3mavx99A1zlCBBuWvtYbrOrKfvGE4qJzUuHqFMHrZBf24S2WaJuK6,0,
+66406ead8715096d167b422b,aaasa@aa.com,a,a,a,$2b$10$vrJ9XtEp0mEnXHGE37mNqusZNDZJrdMdtI0wNjDbRiEq/7tj59yJC,0,admin
+664119df3d78038c45171f36,test3@test3.com,test,test,test,$2b$10$E3awmnqo6.S6NK2TIUPjregntcn4btt.0iKeBolEpb6.dIh.EBfuW,0,guest

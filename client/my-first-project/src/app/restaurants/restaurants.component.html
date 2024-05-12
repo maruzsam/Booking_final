@@ -1,0 +1,33 @@
+<div class="table-container" *ngIf="restaurants && restaurants.length; else noRestaurantsTemplate">
+    <table>
+        <thead>
+            <tr>
+                <th>Restaurant name</th>
+                <th>Restaurant table count</th>
+                <th>Menu</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let restaurant of restaurants">
+                <td>{{restaurant.name}}</td>
+                <td>{{restaurant.tables.length}}</td>
+                <td>{{restaurant.menu}}</td>
+                <td><button>Edit</button></td>
+                <!-- <td><button class="delete-button">Delete</button></td>           -->
+                <!-- <td><button (click)="modifyRestaurant(restaurant)">Módosítás</button></td> -->
+                <td><button (click)="deleteRestaurant(restaurant)" class="delete-button">Delete</button></td>          
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="new-restaurant-button">
+    <button type="button" (click)="newRestaurant()">New restaurant</button>
+</div>
+<div class="new-restaurant-button">
+    <button type="button" (click)="userManagement()">User management</button>
+</div>
+<ng-template #noRestaurantsTemplate>
+    <p>No restaurants available.</p>
+</ng-template>

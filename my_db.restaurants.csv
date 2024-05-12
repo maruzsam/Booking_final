@@ -1,0 +1,3 @@
+_id,tables[0].number,tables[1].number,tables[2].number,tables[0].seatsNumber,tables[1].seatsNumber,tables[2].seatsNumber,tables[0].type,tables[1].type,tables[2].type,tables[0]._id,tables[1]._id,tables[2]._id,name,menu,__v
+664113a13d78038c45171ea7,1,2,3,2,4,6,Fedett,Kültéri,Dohányzó,664113a13d78038c45171ea8,664113a13d78038c45171ea9,664113a13d78038c45171eaa,TesztRestaurant1,Vega,0
+664113fc3d78038c45171eb7,1,2,3,1,2,5,Beltéri,Kültéri,Fedett,664113fc3d78038c45171eb8,664113fc3d78038c45171eb9,664113fc3d78038c45171eba,TestRestaurant2,Csak húsos ételek,0
